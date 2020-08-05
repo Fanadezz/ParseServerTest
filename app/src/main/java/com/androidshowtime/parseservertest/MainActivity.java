@@ -18,9 +18,6 @@ import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import timber.log.Timber;
 
 import static android.widget.Toast.LENGTH_SHORT;
@@ -86,16 +83,6 @@ public class MainActivity extends AppCompatActivity implements View.OnKeyListene
             loginTextView.setText("or Login");
         }
 
-
-        //you need to specify the List type i.e. integer
-        List<Integer> list = new ArrayList<>();
-        list.add(2);
-        list.add(2);
-        list.add(3);
-        list.remove(1);
-        System.out.println(list.get(1));
-
-
     }
 
 
@@ -126,11 +113,9 @@ public class MainActivity extends AppCompatActivity implements View.OnKeyListene
     }
 
     private void signUpCall() {
-        user.signUpInBackground(new SignUpCallback() {
-            @Override
-            public void done(ParseException e) {
 
-                //setting up users credentials
+
+        //setting up users credentials
                 user.setUsername(usernameEd.getText().toString());
                 user.setPassword(passwordEd.getText().toString());
 
@@ -148,8 +133,6 @@ public class MainActivity extends AppCompatActivity implements View.OnKeyListene
                         }
                     }
                 });
-            }
-        });
 
 
     }

@@ -2,11 +2,15 @@ package com.androidshowtime.parseservertest;
 
 import android.app.Application;
 import android.os.Build;
+import android.util.Log;
 
 import androidx.annotation.RequiresApi;
 
 import com.parse.Parse;
 import com.parse.ParseACL;
+import com.parse.ParseException;
+import com.parse.ParseObject;
+import com.parse.SaveCallback;
 
 public class StarterApplication extends Application {
 
@@ -26,7 +30,7 @@ public class StarterApplication extends Application {
                                  .build()
         );
 
-       /* ParseObject object = new ParseObject("ExampleObject");
+        ParseObject object = new ParseObject("ExampleObject");
         object.put("myNumber", "123");
         object.put("myString", "rob");
         object.put("Name", "Vontonnie");
@@ -41,10 +45,12 @@ public class StarterApplication extends Application {
                 } else {
                     Log.i("Parse Result", "Failed" + ex.toString());
                 }
-
+                /*
+                 *
+                 * */
 
             }
-        });*/
+        });
         //vi /opt/bitnami/parse/config.json
 
 
